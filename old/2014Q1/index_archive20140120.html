@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+	A. Conrad Nied's Homepage
+	Designed 2013-12-25
+-->
+
+<head>
+	<title>A. Conrad Nied's Homepage</title>
+	<link rel="stylesheet" type="text/css" href="./main_archive20140120.css" \>
+
+	<script language="JavaScript" type="text/javascript">
+		<!--
+
+		// Top of the Page Expanding Icons
+		var items=["item1","item2","item3","item4","item5"];
+		var descs=["desc1","desc2","desc3","desc4","desc5"];
+
+		function toggle(element) {
+			for (var i = items.length - 1; i >= 0; i--) {
+				itemstr = items[i];
+				descstr = descs[i];
+
+				var item = document.getElementById(itemstr);
+				var desc = document.getElementById(descstr);
+				if(itemstr.match(element)) {
+					desc.style.display = "block";
+					item.style.width = "270px";
+				} else {
+					desc.style.display = "none";
+					item.style.width = "100px";
+				}
+			}
+		}
+
+		// Content explanations
+		var divs=["Prefab", "GPS", "OneBusAway", "PopAlgo", "PTC", "PhonSOM", "InfMap", "AIProjects"];
+
+		function closeAllContent() {
+			for (var i = divs.length - 1; i >= 0; i--) {
+				var div_str = divs[i];
+				toggleContent(div_str);
+			}
+		}
+
+		function toggleContent(div_str) {
+			//var header_str  = div_str + "_header";
+			var expand_str  = div_str + "_expand";
+			var content_str  = div_str + "_content";
+
+			var div = document.getElementById(div_str);
+			//var header = document.getElementById(header_str);
+			var expand = document.getElementById(expand_str);
+			var content = document.getElementById(content_str);
+
+			if(content.style.display.match("none")) {
+				//header.style.color = "#0000FF";
+				expand.innerHTML = "&lt;reduce&gt;";
+				content.style.display = "block";
+			} else {
+				//header.style.color = "#000000";
+				expand.innerHTML = "&lt;expand&gt;";
+				content.style.display = "none";
+			}
+		}
+
+		function openContent(div_str) {
+			var expand_str  = div_str + "_expand";
+			var content_str  = div_str + "_content";
+
+			var div = document.getElementById(div_str);
+			var expand = document.getElementById(expand_str);
+			var content = document.getElementById(content_str);
+
+			expand.innerHTML = "&lt;reduce&gt;";
+			content.style.display = "block";
+		}
+		// -->
+	</script> 
+</head>
+
+<body onLoad="closeAllContent()">
+	<div id="centralblock" style="position: relative; margin-left: auto; margin-right: auto; width: 600px;">
+		<div id="portrait" style="position:absolute; top:200px; left:210px;">
+			<img src="portrait.png" width="160px" onMouseOver="javascript:toggle('portrait');" />
+		</div>
+
+		<div id="item3" class="rounded" style="position:absolute; top:250px; left:50px;">
+			<a href="#InfMap" onClick="javascript:openContent('InfMap');">
+				<img src="icon_infmap.png" width="100px" onMouseOver="javascript:toggle('item3');" />
+				<span id="desc3" class="description">
+					&nbsp;Simulating Influence<br />
+					&nbsp;on a Global Scale<br />
+				</span>
+			</a>
+		</div>
+
+		<div id="item4" class="rounded" style="position:absolute; top:250px; left:450px;">
+			<a href="#PhonSOM" onClick="javascript:openContent('PhonSOM');">
+				<img src="icon_phonosom.png" width="100px" onMouseOver="javascript:toggle('item4');" />
+				<span id="desc4" class="description">
+					&nbsp;Phonological<br />
+					&nbsp;Self-Organizing<br />
+					&nbsp;Neural Networks<br />
+				</span>
+			</a>
+		</div>
+
+		<div id="item5" class="rounded" style="position:absolute; top:100px; left:400px;">
+			<a href="#GPS" onClick="javascript:openContent('GPS');">
+				<img src="icon_mghgps.png" width="100px" onMouseOver="javascript:toggle('item5');" />
+				<span id="desc5" class="description">
+					&nbsp;Neural Linguistic<br />
+					&nbsp;Analysis Matlab Toolkit<br/>
+					&nbsp;using MEG & MRI<br />
+				</span>
+			</a>
+		</div>
+
+		<div id="item1" class="rounded" style="position:absolute; top:50px; left:250px;">
+			<a href="#OneBusAway" onClick="javascript:openContent('OneBusAway');" >
+				<img src="icon_onebusaway.png" width="100px" onMouseOver="javascript:toggle('item1');" />
+				<span id="desc1" class="description">
+					&nbsp;Predicting Bus Arrivals<br />
+					&nbsp;Using One Bus Away<br />
+					&nbsp;Real-Time Data
+				</span>
+			</a>
+		</div>
+
+		<div id="item2" class="rounded" style="position:absolute; top:100px; left:100px;">
+			<a href="#PopAlgo" onClick="javascript:openContent('PopAlgo');">
+				<img src="icon_popalgo.png" width="100px" onMouseOver="javascript:toggle('item2');" />
+				<span id="desc2" class="description">
+					<br />
+					&nbsp;Population Algorithms
+				</span>
+			</a>
+		</div>
+
+		<div id="pushdown"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+
+		<h1> Alexander Conrad Nied </h1>
+
+		<p>Work in Progress, last updated 2014-01-14</p>
+
+		<p><a href="AConradNied_CV_2013-12-16.pdf">Curriculum Vitae</a></p>
+
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;I'm a computer scientist with a background in cognitive science. I am in my first year of my PhD program at University of Washington: Computer Science and Engineering. My advisor is <a href="http://www.cs.washington.edu/people/faculty/weld/">Dan Weld</a> and I work in the HCI lab.</p>
+
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;Previously, I worked at Massachusetts General Hospital in the Neuropsychology Laboratory and got my bachelors degree in CS at Boston University.</p>
+
+		<h2> Objective </h2>
+
+	    <p>&nbsp;&nbsp;&nbsp;&nbsp;I imagine a day in which we will be able to enter each other's minds and feel and experience all of the emotions and thoughts we have. We are already on our way; technology has the power to transform our relationships and bring us together. With the aim to contribute to that field, I have worked in <span class="datasci smallborder">human data analysis</span>, <span class="ui smallborder">user interfaces</span>, and <span class="neuro smallborder">linguistic neuroscience</span>. Part of this endeavor is to make computer interfaces that utilize our cognitive abilities better. For that, I am working on an interface reinterpreting program called <a href="#Prefab" onClick="javascript:openContent('Prefab');">Prefab</a> at UW. Ultimately, I want to work on programs that work between people and improve our communication with each other. An example is my idea to integrate emotive personal photographs in instant messaging as described in my <a href="AConradNied_NSF_ResearchStatement_20131103.pdf">NSF Research Proposal</a>.</p>
+
+		<h1> Projects </h1>
+
+		<h2 class="year"> 2014 </h2>
+
+		<div id="Prefab" class="ui">
+			<h3 id="Prefab_header">Prefab <a href="#Prefab" id="Prefab_expand" onClick="javascript:toggleContent('Prefab');">&lt;expand&gt;</a></h3>
+
+			<div id="Prefab_content" class="content">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;I just started working with <a href="http://homes.cs.washington.edu/~jfogarty/">James Fogarty</a> and <a href="http://homes.cs.washington.edu/~mdixon/">Morgan Dixon</a> on their development project Prefab. Prefab is a C# program that interprets interfaces and can reconfigure how they are used. I will be helping Morgan prepare the code for release and adding additional functionality.</p>
+				<iframe width="560" height="315" src="http://www.youtube.com/embed/videoseries?list=PLOzUGhfPlMJzXAOeAAJ2DKzO6iIKGe0QH" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<br />
+
+		<div id="GPS" class="ui">
+			<h3 id="GPS_header">Graphical Processing Stream <a href="#GPS" id="GPS_expand" onClick="javascript:toggleContent('GPS');">&lt;expand&gt;</a></h3>
+
+			<div id="GPS_content" class="content">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;A GUI to aid in processing MEG & MEG data to neural connectivity maps.</p>
+				<p>[<a href="AConradNied_GPS_BiomagPoster_2012.pdf">Biomag 2012 Poster</a>]</p>
+				<iframe width="560" height="315" src="http://www.youtube.com/embed/videoseries?list=PLE7DDF5485CB32126" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<h2 class="year"> 2013 </h2>
+
+		<div id="OneBusAway" class="datasci">
+			<h3 id="OneBusAway_header">One Bus One Minute Away <a href="#OneBusAway" id="OneBusAway_expand" onClick="javascript:toggleContent('OneBusAway');">&lt;expand&gt;</a></h3>
+
+			<div id="OneBusAway_content" class="content">
+				<img src="AConradNied_OneBusAway_Image.png" width="100px" style="float:right"/>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Class project for <a href="https://courses.cs.washington.edu/courses/cse546/13au/index.html">Machine Learning</a>. <a href="http://homes.cs.washington.edu/~cmbaker/">Catie Baker</a> and I used an array of different machine learning techniques in order to predict bus arrival time.</p>
+
+				<p><b>Predicting Bus Arrivals Using One Bus Away Real-Time Data</b><br />
+				[<a href="AConradNied_OneBusAway_Writeup_20131209.pdf">Class Paper</a>]</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;<i>Abstract:</i> Providing real-time bus arrival times can enhance the experience of riders using public transit, but errors in the predictions can cause a decrease in ridership. Using data collected from a local transit agency, we created models to predict arrival times using K-Nearest Neighbors and Kernel Regression and seven sets of features. The best feature set had a RMSE of 34 seconds, a large improvement over the baseline of always predicting on-time arrivals, which had an RMSE of 99 seconds.</p>
+			</div>
+		</div>
+
+		<br />
+		
+		<div id="PopAlgo" class="datasci">
+			<h3 id="PopAlgo_header">Visual Population Algorithms <a href="#PopAlgo" id="PopAlgo_expand" onClick="javascript:toggleContent('PopAlgo');">&lt;expand&gt;</a></h3>
+
+			<div id="PopAlgo_content" class="content">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;In my spare time, I've continued my work on <a href="#InfMap" onClick="javascript:openContent('InfMap');">mapping influence</a>, but using new heuristics and making new visuals. The focus of these particular algorithms is to divide the world into informed countries. The first video below explores what happens when you combine points of the world in order of highest population. This forms countries based on spatial continuity of people - which usually is realistic because people move within high population zones and form communities. Other videos show heuristics attempting to divide the world into even population zones. There are a lot more videos I didn't get a chance to make in this project too that I may revisit some day.</p>
+				<iframe width="560" height="315" src="http://www.youtube.com/embed/videoseries?list=PLOzUGhfPlMJzd8wCJ_eWUoQwP1fO5LN6x" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<h2 class="year"> 2012 </h2>
+
+		<div id="PTC" class="neuro">
+			<h3 id="PTC_header">Phonotactic Constraints <a href="#PTC" id="PTC_expand" onClick="javascript:toggleContent('PTC');">&lt;expand&gt;</a></h3>
+
+			<div id="PTC_content" class="content">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Brain Imaging Research Project examining linguistic neural connectivity. Publication in press.</p>
+			</div>
+		</div>
+
+		<h2 class="year"> 2011 </h2>
+
+		<div id="PhonSOM" class="neuro">
+			<h3 id="PhonSOM_header">Self Organizing Phonological Maps <a href="#PhonSOM" id="PhonSOM_expand" onClick="javascript:toggleContent('PhonSOM');">&lt;expand&gt;</a></h3>
+
+			<div id="PhonSOM_content" class="content">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;I worked for a year at the Boston University Sargent College Speech Lab. The lab's most ambitious project is DIVA, a neural network that learns and produces speech sounds. My project with DIVA was to investigate how a self-organizing map could automatically classify speech sound features into phonemes using a self-organizing map. My results demonstrated possible ways that a neural network could adapt to phonemes.</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;I cannot find my images documenting my analysis right now, but once I do I will upload them.</p>
+			</div>
+		</div>
+
+		
+		<h2 class="year"> 2010 </h2>
+
+		<div id="InfMap" class="datasci">
+			<h3 id="InfMap_header">Simulating Influence on a Global Scale <a href="#InfMap" id="InfMap_expand" onClick="javascript:toggleContent('InfMap');">&lt;expand&gt;</a></h3>
+
+			<div id="InfMap_content" class="content">
+				<p>[<a href="AConradNied_InfMap_Writeup_2010.pdf">Class Writeup</a>]<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;For my Data Mining Seminar with <a href="http://www.cs.bu.edu/~evimaria/">Evimaria Terzi</a>, I built a series of programs that simulated the spread of influential artifacts on a map. The program was generalized to simulate viruses, the Roman Empire, language or general culture evolving, and genetic drift. The heuristic was pretty simple but demonstrative of global-scale interactions.</p>
+				<iframe width="560" height="315" src="http://www.youtube.com/embed/videoseries?list=PLD759E8906A91964F" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		
+		<h2 class="year"> 2009 </h2>
+
+		<div id="AIProjects" class="datasci">
+			<h3 id="AIProjects_header">Artificial Intelligence Class Projects <a href="#AIProjects" id="AIProjects_expand" onClick="javascript:toggleContent('AIProjects');">&lt;Expand&gt;</a></h3>
+
+			<div id="AIProjects_content" class="content">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;I did a series of projects with my classmates in our artificial intelligence class. They included an interactive Rock Paper Scissors game with the computer and hand gesture recognition and a neural network number classifier. I don't have the files at hand but when I do I will upload them to the website.</p>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

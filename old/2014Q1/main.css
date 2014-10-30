@@ -1,0 +1,212 @@
+/*
+ * Alexander Conrad Nied's Homepage
+ * Main Style Sheet
+ * Designed 2014-01-20
+ * 
+ * Help from http://multimedia.journalism.berkeley.edu/tutorials/css-layout/nav-menu/
+ */
+
+
+/* START NAV MENU */
+nav {
+	background-color:#008F9F;
+	height:40px;
+	width:800px;
+	position:fixed;
+	z-index:3;
+}
+
+ 
+nav ul {
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ 
+nav ul li {
+	display: block;
+	position: relative;
+	float: right;
+	padding: 10px 0 0 0;
+	height: 20px;
+}
+
+nav ul li.home {
+	font-size: 1.6em;
+	padding: 0;
+	float: left;
+	height: 30px;
+}
+ 
+nav li ul { 
+	display: none; 
+}
+ 
+nav ul li a {
+	display: block;
+	text-decoration: none;
+	padding: 7px 15px 3px 15px;
+	background: #008F9F;
+	color: #ffffff;  
+	margin-left: 1px;
+	white-space: nowrap;
+	height: 20px; /* Width and height of top-level nav items */
+	/*width:90px;*/
+}
+
+nav ul li.home a {
+	height: 30px;
+}
+ 
+nav ul li a:hover { 
+	background: #00AFBF; 
+	text-decoration: none;
+}
+ 
+nav li:hover ul {
+	display: block;
+	position: absolute;
+	height:30px;
+}
+ 
+nav li:hover li {
+	float: none;
+	font-size: 12px;
+	padding: 0px 0px 10px 0px;
+}
+ 
+nav li:hover li a { 
+	background: #006F7F; 
+	height:20px; /* Height of lower-level nav items is shorter than main level */
+}
+ 
+nav li:hover li a:hover { 
+	background: #009FAF; 
+}
+ 
+nav ul li ul li a {
+    text-align:left; /* Top-level items are centered, but nested list items are left-aligned */
+}
+ 
+/* END NAV MENU */
+
+/* Framing */
+
+body {
+	font-family: Avenir, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	background-color: #FFFFFF;/*#DFFFEF;*/
+	margin: 0 auto 1.5em auto;
+	padding: 0 2em 2em 2em;
+	border: 10px;
+	border-top-width: 0px;
+	border-style: solid;
+	border-color: #008F9F;
+	width: 800px; 
+	min-height: 240px;
+ }
+
+.header {
+	font-size: 1.6em;
+	font-weight: bold;
+	padding: 0.3ex;
+	margin-top: 1ex;
+	margin-bottom: 1ex;
+	background-color: #008F9F;
+	color: #FFFFFF;
+	text-align: center;
+	z-index:1;
+	border-radius: 5px;
+}
+
+.header.secondary {
+	font-size: 1.2em;
+	background-color: #00AFBF;
+}
+
+.header .year {
+	font-size: .8em;
+	font-weight: normal;
+	float: right;
+	position: relative;
+	padding: 2px;
+	z-index: 2;
+	width: 100px;
+	text-align: right;
+}
+
+.header .locale {
+	font-size: .8em;
+	font-weight: normal;
+	float: left;
+	position: relative;
+	padding: 2px;
+	z-index: 2;
+	width: 100px;
+	text-align: left;
+}
+
+.Publications .header {
+	background-color: #FFFFFF;
+	border: solid;
+	border-width: 2px 0px 2px 0px;
+	border-color: #00AFBF;
+	color: #00AFBF;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+p a:before {
+	content: "[";
+	color: black;
+	font-size: 1em;
+}
+p a:after {
+	content: "]";
+	color: black;
+	font-size: 1em;
+}
+
+a.pub {
+	float:left;
+}
+a.pub img {
+	border-width: 5px;
+	height: 160px;
+}
+
+.portrait {
+	float:left;
+	padding: 0px 10px 10px 10px;
+}
+
+img.fig {
+	height: 160px;
+	border-width: 0px;
+	padding: 0px 5px 0px 5px;
+	float: left;
+}
+
+iframe {
+	height: 160px;
+	width: 240px;
+	border: 0px;
+	float: left;
+	padding: 0 5px;
+}
+
+.fitfigure {
+	min-height: 160px;
+}
+
+br.interrupt {
+	height: 1px;
+	content:"";
+	display:block;
+}
