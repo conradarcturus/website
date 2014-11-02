@@ -10,6 +10,7 @@
 // global state
 var navbar;
 var body;
+var projects;
 var currentSection;  // or "all" which is not actually a div
 var allSections;   // set on-load for performance/convenience
 
@@ -18,54 +19,86 @@ function installNavigation() {
     // precompute allSections
     navbar = getById("navbar");
     body = getById("body");
+    projects = getById("projects");
     allSections = getElementsByClassName(body, "section");
     currentSection = "all";
+
+    researchNavBar = getById("research_navbar");
 }
 
 // invoked by onclick handlers in the navbar
 function updateSection(section) {
     // If the section is empty, just make it be "all"
     if (section == "")
-		section = "all";
+		section = "Main";
     else // Otherwise, remove the hash in the section name
 		section = section.replace('#','');
 
 	// Hide old sections
-    var toHide = currentSection == "all" ? allSections : getElementsByClassName(body, currentSection);
+    var toHide = allSections;
     for (var i = 0; i < toHide.length; ++i) {
-        toHide[i].style.display = "none";
-        console.log("hiding" + i);
+        // if(toHide[i].classList[0] != "research_button")
+            toHide[i].style.display = "none";
+        //console.log("hiding" + i);
         //toHide[i].innerHTML = "Hiding" + toString(i)  + "<br />";
     }
 
-    // Unglow navigation elements
+    // Unhighlight navigation elements
     var toHide = getElementsByClassName(navbar, currentSection);
     for (var i = 0; i < toHide.length; ++i) {
         // toHide[i].style.color = "#FFFFFF";
         // toHide[i].style.textShadow = "none";
         toHide[i].style.fontWeight = "normal";
     }
+    var toHide = getElementsByClassName(researchNavBar, currentSection);
+    for (var i = 0; i < toHide.length; ++i) {
+        toHide[i].style.fontWeight = "normal";
+    }
 
     // Load the new section
     currentSection = section;
-    var toShow = currentSection == "all" ? allSections : getElementsByClassName(body, currentSection);
-        console.log(toShow);
+    var toShow;
+    toShow = getElementsByClassName(body, currentSection);
+    console.log(toShow);
     for (var i = 0; i < toShow.length; ++i) {
         toShow[i].style.display = "block";
         // toShow[i].style.backgroundColor = "#AFAFAF";
         //toShow[i].innerHTML = "Showing" + toString(i) + "<br />";
     }
 
-    // Glow navigation elements
-    if(currentSection != "all") {
-	    var toShow = getElementsByClassName(navbar, currentSection);
-	    for (var i = 0; i < toShow.length; ++i) {
-	        // toShow[i].style.color = "#AFAFFF";
+    // Highlight navigation elements
+    if(currentSection != "Main") {
+        var toShow = getElementsByClassName(navbar, currentSection);
+        for (var i = 0; i < toShow.length; ++i) {
+            // toShow[i].style.color = "#AFAFFF";
             // Horizontal Length, Vertical Length, Radius, Shadow Colour
             // toShow[i].style.textShadow = "0px 0px 5px #0000FF";
             toShow[i].style.fontWeight = "bold";
         }
+        toShow = getElementsByClassName(researchNavBar, currentSection);
+        for (var i = 0; i < toShow.length; ++i) {
+            toShow[i].style.fontWeight = "bold";
+        }
 	}
+
+    // Manage research navigation bar
+    var research_examples = getElementsByClassName(researchNavBar, "research_example");
+    var research_navs  = getElementsByClassName(researchNavBar, "research_nav");
+    if(currentSection == "Main" || currentSection == "Research") {
+        for (var i = 0; i < research_examples.length; ++i) {
+            research_examples[i].style.display = "block";
+            // research_navs[i].style.width = "200px";
+            // research_navs[i].style.margin = "10px 30px 10px 30px";
+        }
+    } else {
+        for (var i = 0; i < research_examples.length; ++i) {
+            research_examples[i].style.display = "none";
+            // research_navs[i].style.width = "120px";
+            // research_navs[i].style.margin = "10px 5px 10px 5px";
+        }
+    }
+
+
 
 
     // toShow = getElementsByClassName(body, "Neurolingustics");
