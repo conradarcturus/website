@@ -12,7 +12,9 @@ var navbar;
 var body;
 var projects;
 var currentSection;  // or "all" which is not actually a div
-var allSections;   // set on-load for performance/convenience
+var contents;
+var curtain;
+var reseachFocus;
 
 // build and initialize the navbar
 function installNavigation() {
@@ -21,109 +23,114 @@ function installNavigation() {
     body = getById("body");
     projects = getById("projects");
     allSections = getElementsByClassName(body, "section");
-    currentSection = "all";
+    currentSection = "Main";
 
-    researchNavBar = getById("research_navbar");
+    contents = getElementsByClassName(body, "content");
+
+    // Add functions to projects
+    curtain = getById("curtain");
+    // curtain.onClick(function() { updateSection(""); });
+    curtain.onclick = function(event) {
+        if(event.target.id == "curtain")
+            toggleCurtain();
+    };
+    // descContainer = getById("descContainer");
+    // descContainer.onclick = function() {};
+    projectlinks = getElementsByClassName(projects, "project");
+    for(var iProject = 0; iProject < projectlinks.length; iProject++) {
+        projectlinks[iProject].onclick = function() { toggleCurtain(); };
+    }
+
+    researchFocus = "Research"
+}
+
+function toggleCurtain() {
+    if(hasClass(curtain, "on")) {
+        removeClass(curtain, "on");
+    } else {
+        addClass(curtain, "on");
+    }
 }
 
 // invoked by onclick handlers in the navbar
 function updateSection(section) {
+    // Find parameters
     // If the section is empty, just make it be "all"
     if (section == "")
-		section = "Main";
+		section = "Research";
     else // Otherwise, remove the hash in the section name
 		section = section.replace('#','');
+    lastSection = currentSection;
+    nextSection = section;
+    currentSection = nextSection;
+    isProject = nextSection.substring(nextSection.length - 4) == "Proj";
+    isResearchType = nextSection.substring(nextSection.length - 8) == "Research";
 
-	// Hide old sections
-    var toHide = allSections;
-    for (var i = 0; i < toHide.length; ++i) {
-        // if(toHide[i].classList[0] != "research_button")
-            toHide[i].style.display = "none";
-        //console.log("hiding" + i);
-        //toHide[i].innerHTML = "Hiding" + toString(i)  + "<br />";
-    }
+    // Indicate the research focus
+    if(isResearchType) {
+        researchFocus = nextSection;
 
-    // Unhighlight navigation elements
-    var toHide = getElementsByClassName(navbar, currentSection);
-    for (var i = 0; i < toHide.length; ++i) {
-        // toHide[i].style.color = "#FFFFFF";
-        // toHide[i].style.textShadow = "none";
-        toHide[i].style.fontWeight = "normal";
-    }
-    var toHide = getElementsByClassName(researchNavBar, currentSection);
-    for (var i = 0; i < toHide.length; ++i) {
-        toHide[i].style.fontWeight = "normal";
-    }
-
-    // Load the new section
-    currentSection = section;
-    var toShow;
-    toShow = getElementsByClassName(body, currentSection);
-    console.log(toShow);
-    for (var i = 0; i < toShow.length; ++i) {
-        toShow[i].style.display = "block";
-        // toShow[i].style.backgroundColor = "#AFAFAF";
-        //toShow[i].innerHTML = "Showing" + toString(i) + "<br />";
-    }
-
-    // Highlight navigation elements
-    if(currentSection != "Main") {
-        var toShow = getElementsByClassName(navbar, currentSection);
-        for (var i = 0; i < toShow.length; ++i) {
-            // toShow[i].style.color = "#AFAFFF";
-            // Horizontal Length, Vertical Length, Radius, Shadow Colour
-            // toShow[i].style.textShadow = "0px 0px 5px #0000FF";
-            toShow[i].style.fontWeight = "bold";
-        }
-        toShow = getElementsByClassName(researchNavBar, currentSection);
-        for (var i = 0; i < toShow.length; ++i) {
-            toShow[i].style.fontWeight = "bold";
-        }
-	}
-
-    // Manage research navigation bar
-    var research_examples = getElementsByClassName(researchNavBar, "research_example");
-    var research_navs  = getElementsByClassName(researchNavBar, "research_nav");
-    if(currentSection == "Main" || currentSection == "Research") {
-        for (var i = 0; i < research_examples.length; ++i) {
-            research_examples[i].style.display = "block";
-            // research_navs[i].style.width = "200px";
-            // research_navs[i].style.margin = "10px 30px 10px 30px";
-        }
-    } else {
-        for (var i = 0; i < research_examples.length; ++i) {
-            research_examples[i].style.display = "none";
-            // research_navs[i].style.width = "120px";
-            // research_navs[i].style.margin = "10px 5px 10px 5px";
+        researchNavBar = getById("research_navbar");
+        researchLinks = getElementsByClassName(researchNavBar, "research_nav");
+        for (var iLink = 0; iLink < researchLinks.length; iLink++) {
+            researchLink = researchLinks[iLink];
+            console.log(researchLink);
+            if(hasClass(researchLink, researchFocus))
+                researchLink.style.fontWeight = "bold";
+            else
+                researchLink.style.fontWeight = "normal";
         }
     }
 
+	// Hide projects that aren't in the current research focus
+    projectlinks = getElementsByClassName(projects, "project");
+    for(var iProject = 0; iProject < projectlinks.length; iProject++) {
+        project = projectlinks[iProject];
+        if(hasClass(project, researchFocus))
+            project.style.display = "inline-table";
+        else
+            project.style.display = "none";
+    }
 
+    // Hide years that don't have a member of the current research focus
+    years = getElementsByClassName(projects, "year");
+    for(var iYear = 0; iYear < years.length; iYear++) {
+        year = years[iYear];
+        if(hasClass(year, researchFocus)) {
+            year.style.display = "block";
+            // year.style.height = 200px;
+        } else {
+            year.style.display = "none";
+            // year.style.height = 0px;
+        }
+    }
 
+    // Focus on a project description if indicated to do so
+    if(isProject) {
+        projectName = nextSection.substring(0, nextSection.length - 4);
 
-    // toShow = getElementsByClassName(body, "Neurolingustics");
-    // for (var i = 0; i < toShow.length; ++i) {
-    //     var colord = toShow[i].style.backgroundColor;
-    //     colord[0] = 0;
-    //     toShow[i].innerHTML = colord;
-    // }
-    // toShow = getElementsByClassName(body, "Research");
-    // for (var i = 0; i < toShow.length; ++i) {
-    //     var colord = toShow[i].style.backgroundColor;
-    //     //colord[3] = 'F';
-    //     //toShow[i].style.backgroundColor = colord;
-    // }
-    // toShow = getElementsByClassName(body, "Publications");
-    // for (var i = 0; i < toShow.length; ++i) {
-    //     var colord = toShow[i].style.backgroundColor;
-    //     //colord[5] = 'F';
-    //     //toShow[i].style.backgroundColor = colord;
-    // }
+        if(!hasClass(curtain, "on"))
+            addClass(curtain, "on");
+
+        // Find the description for the current class
+        descriptions = getElementsByClassName(curtain, "description");
+        for(var iDesc = 0; iDesc < descriptions.length; iDesc++) {
+            if(hasClass(descriptions[iDesc], projectName))
+                descriptions[iDesc].style.display = "block";
+            else
+                descriptions[iDesc].style.display = "none";
+        }
+    }
 }
 
 // really general utility routines
 function classRegExp(c) {
     return new RegExp('\\b' + c + '\\b');
+}
+function hasClass(node, classname) {
+    var retnode = [];
+    var classtest = classRegExp(classname);
+    return classtest.test(node.className);
 }
 function getElementsByClassName(node, classname) {
     // TO DO: test both sides of if
@@ -149,27 +156,3 @@ function addClass(node, c) {
 function removeClass(node, c) {
     node.className = node.className.replace(classRegExp(c),'');
 }
-
-
-// function open(focus) {
-
-// 	var content_list = ["Biography", "Research"];
-// 	var research_list = ["UserInterfaces", "DataVis", "MachineLearningAI", "Neurolingustics"];
-
-	// // Sort out which elements are being focused on and whiched unfocused (blurred)
-	// var all_divs     = getElementsByClassName("content");
-	// var focused_divs = getElementsByClassName(focus, "content");
-	// var blurred_divs = $(all_divs).not(focused_divs).get();
-
-	// // Focus on proper elements
-	// for (var i = 0; i < focused_divs.length; i++) {
-	// 	focused_divs[i].style.color = "#00ff00";
-	// 	//focused_divs[i].style.display = "";
-	// }
-
-	// // Blur the rest
-	// for (var i = 0; i < blurred_divs.length; i++) {
-	// 	focused_divs[i].style.color = "#ff0000";
-	// 	//blurred_divs[i].style.display = "none";
-	// }
-// }
