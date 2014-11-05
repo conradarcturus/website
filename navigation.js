@@ -1,9 +1,9 @@
 /*
  * Alexander Conrad Nied's Homepage
  * Navigation Javascript Routines
- * Designed 2014-01-20
+ * Designed 2014-01-20, redesigned 2014-11-01
  *
- * Largely based off of Dan Grossman's website design at:
+ * Forked off of Dan Grossman's website design at:
  * https://courses.cs.washington.edu/courses/cse373/13au/grossmanHomepage.js
  */
 
@@ -57,7 +57,9 @@ function updateSection(section) {
     // Find parameters
     // If the section is empty, just make it be "all"
     if (section == "")
-		section = "Research";
+        section = "Research";
+    else if (section == "#AllResearch")
+        section = "Research";
     else // Otherwise, remove the hash in the section name
 		section = section.replace('#','');
     lastSection = currentSection;
