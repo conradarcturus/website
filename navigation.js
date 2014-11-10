@@ -36,14 +36,14 @@ function installNavigation() {
     };
     // descContainer = getById("descContainer");
     // descContainer.onclick = function() {};
-    projectlinks = getElementsByClassName(projects, "project");
+    projectlinks = getElementsByClassName(body, "project");
     for(var iProject = 0; iProject < projectlinks.length; iProject++) {
         projectlinks[iProject].onclick = function() { toggleCurtain(); };
     }
-    projectlinks = getElementsByClassName(getById("potpourri"), "project");
-    for(var iProject = 0; iProject < projectlinks.length; iProject++) {
-        projectlinks[iProject].onclick = function() { toggleCurtain(); };
-    }
+    // projectlinks = getElementsByClassName(getById("potpourri"), "project");
+    // for(var iProject = 0; iProject < projectlinks.length; iProject++) {
+    //     projectlinks[iProject].onclick = function() { toggleCurtain(); };
+    // }
 
     researchFocus = "Research"
 }
@@ -86,16 +86,16 @@ function updateSection(section) {
             else
                 researchLink.style.fontWeight = "normal";
         }
-    }
 
-	// Hide projects that aren't in the current research focus
-    projectlinks = getElementsByClassName(projects, "project");
-    for(var iProject = 0; iProject < projectlinks.length; iProject++) {
-        project = projectlinks[iProject];
-        if(hasClass(project, researchFocus))
-            project.style.display = "inline-table";
-        else
-            project.style.display = "none";
+    	// Hide projects that aren't in the current research focus
+        projectlinks = getElementsByClassName(projects, "project");
+        for(var iProject = 0; iProject < projectlinks.length; iProject++) {
+            project = projectlinks[iProject];
+            if(hasClass(project, researchFocus))
+                project.style.display = "inline-table";
+            else
+                project.style.display = "none";
+        }
     }
 
     // Hide years that don't have a member of the current research focus
