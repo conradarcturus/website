@@ -296,10 +296,13 @@ br.interrupt {
 }
 
 .descLeft {
-	width: 400px;
 	min-height: 300px;
 	float:left;
 	text-align: center;
+}
+
+.description .descLeft {
+	width: 400px;
 	vertical-align: middle;
 }
 
@@ -310,11 +313,14 @@ br.interrupt {
 	margin: 10px auto 10px auto;
 }
 
-.descLeft a {
+#Biography .descLeft a {
+	margin: 5px;
+}
+.description .descLeft a {
 	margin: 10px;
 }
 
-.descRight {
+.description .descRight {
 	margin-left: 400px;
 	margin-right: 10px;
 }
@@ -330,6 +336,6 @@ br.interrupt {
 	margin-bottom: 5px;
 }
 
-#potpourri .year {
+#Potpourri .year {
 	margin: 0px 35px 0px 35px;
 }
