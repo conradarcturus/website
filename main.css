@@ -296,12 +296,12 @@ br.interrupt {
 }
 
 .descLeft {
-	min-height: 300px;
 	float:left;
 	text-align: center;
 }
 
 .description .descLeft {
+	min-height: 300px;
 	width: 400px;
 	vertical-align: middle;
 }
