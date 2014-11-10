@@ -124,14 +124,14 @@ a:hover .research_button {
 
 body {
 	font-family: Avenir, Verdana, Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	font-size: 0.8em;
 	background-color: #FFFFFF;/*#DFFFEF;*/
 	margin: 0 auto 1.5em auto;
 	padding: 0 2em 2em 2em;
-	border: 10px;
-	border-top-width: 0px;
-	border-style: solid;
-	border-color: #008F9F;
+	/*border: 10px;*/
+	/*border-top-width: 0px;*/
+	/*border-style: solid;*/
+	/*border-color: #008F9F;*/
 	width: 800px; 
 	min-height: 240px;
  }
@@ -140,7 +140,7 @@ body {
 	font-size: 1.6em;
 	font-weight: bold;
 	padding: 0.3ex;
-	margin-top: 1ex;
+	margin-top: 3ex;
 	margin-bottom: 1ex;
 	background-color: #008F9F;
 	color: #FFFFFF;
@@ -171,7 +171,7 @@ a:hover {
 }
 
 .header a {
-	color: white;
+	color: #FFFFFF;
 }
 
 p a:before {
@@ -226,16 +226,8 @@ br.interrupt {
 	display:block;
 }
 
-.content {
-	display: none;
-}
-
-#projects .year {
+.iconlist .year {
 	height: 170px;
-}
-
-#projects .header {
-	display: none;
 }
 
 .project {
@@ -253,7 +245,7 @@ br.interrupt {
 	float: none;
 }
 
-#projects h2 {
+.iconlist .year h2 {
 	margin-bottom: 0px;
 	float: left;
 }
@@ -298,6 +290,8 @@ br.interrupt {
 	width: 800px;
 	height: 400px;
 	border-radius: 10px;
+	border-width: 10px;
+	border-color: white;
 	background-color: #ffffff;
 }
 
@@ -334,4 +328,8 @@ br.interrupt {
 .description h3 {
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+#potpourri .year {
+	margin: 0px 35px 0px 35px;
 }

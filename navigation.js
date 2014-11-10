@@ -40,6 +40,10 @@ function installNavigation() {
     for(var iProject = 0; iProject < projectlinks.length; iProject++) {
         projectlinks[iProject].onclick = function() { toggleCurtain(); };
     }
+    projectlinks = getElementsByClassName(getById("potpourri"), "project");
+    for(var iProject = 0; iProject < projectlinks.length; iProject++) {
+        projectlinks[iProject].onclick = function() { toggleCurtain(); };
+    }
 
     researchFocus = "Research"
 }
