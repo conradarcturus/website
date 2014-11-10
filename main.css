@@ -226,10 +226,6 @@ br.interrupt {
 	display:block;
 }
 
-.content {
-	display: none;
-}
-
 .iconlist .year {
 	height: 170px;
 }
@@ -294,6 +290,8 @@ br.interrupt {
 	width: 800px;
 	height: 400px;
 	border-radius: 10px;
+	border-width: 10px;
+	border-color: white;
 	background-color: #ffffff;
 }
 
@@ -330,4 +328,8 @@ br.interrupt {
 .description h3 {
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+#potpourri .year {
+	margin: 0px 35px 0px 35px;
 }
