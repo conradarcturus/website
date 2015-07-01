@@ -2,93 +2,22 @@
  * Alexander Conrad Nied's Homepage
  * Main Style Sheet
  * Designed 2014-01-20
- * 
- * Help from http://multimedia.journalism.berkeley.edu/tutorials/css-layout/nav-menu/
+ * Converted to BootStrap/JQuery 2015-06-30
  */
 
+/* New organization via Bootstrap */
 
-/* START NAV MENU */
-nav {
-	background-color:#008F9F;
-	height:40px;
-	width:800px;
-	position:fixed;
-	z-index:3;
-}
- 
-nav ul {
-	font-size: 1.2em;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
- 
-nav ul li {
-	display: block;
-	position: relative;
-	float: right;
-	padding: 10px 0 0 0;
-	height: 20px;
+hr.top {
+	border: none;
+	height: 1px;
+	/* Set the hr color */
+	color: #333; /* old IE */
+	background-color: #333; /* Modern Browsers */
 }
 
-nav ul li.home {
-	font-size: 1.6em;
-	padding: 0;
-	float: left;
-	height: 30px;
+h2 {
+	text-align:center;
 }
- 
-nav li ul { 
-	display: none; 
-}
- 
-nav ul li a {
-	display: block;
-	text-decoration: none;
-	padding: 7px 15px 3px 15px;
-	background: #008F9F;
-	color: #ffffff;  
-	margin-left: 1px;
-	white-space: nowrap;
-	height: 20px; /* Width and height of top-level nav items */
-	/*width:90px;*/
-}
-
-nav ul li.home a {
-	height: 30px;
-}
- 
-nav ul li a:hover { 
-	background: #00AFBF; 
-	text-decoration: none;
-}
- 
-nav li:hover ul {
-	display: block;
-	position: absolute;
-	height:30px;
-}
- 
-nav li:hover li {
-	float: none;
-	font-size: 12px;
-	padding: 0px 0px 10px 0px;
-}
- 
-nav li:hover li a { 
-	background: #006F7F; 
-	height:20px; /* Height of lower-level nav items is shorter than main level */
-}
- 
-nav li:hover li a:hover { 
-	background: #009FAF; 
-}
- 
-nav ul li ul li a {
-    text-align:left; /* Top-level items are centered, but nested list items are left-aligned */
-}
- 
-/* END NAV MENU */
 
 /* Research Navigation */
 #research_navbar {
@@ -124,7 +53,7 @@ a:hover .research_button {
 
 body {
 	font-family: Avenir, Verdana, Helvetica, Arial, sans-serif;
-	font-size: 0.8em;
+	/*font-size: 0.8em;*/
 	background-color: #FFFFFF;/*#DFFFEF;*/
 	margin: 0 auto 1.5em auto;
 	padding: 0 2em 2em 2em;
@@ -132,8 +61,9 @@ body {
 	/*border-top-width: 0px;*/
 	/*border-style: solid;*/
 	/*border-color: #008F9F;*/
-	width: 800px; 
+	/*width: 800px; */
 	min-height: 240px;
+	max-width: 950px;
  }
 
 .header {

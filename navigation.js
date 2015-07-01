@@ -14,7 +14,7 @@ var projects;
 var currentSection;  // or "all" which is not actually a div
 var contents;
 var curtain;
-var reseachFocus;
+var researchFocus;
 
 // build and initialize the navbar
 function installNavigation() {

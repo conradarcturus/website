@@ -5,12 +5,21 @@
 	Alexander Conrad Nied's Homepage
 	HTML Index
 	Designed 2014-01-20
+    Converted to BootStrap/JQuery 2015-06-30
 -->
 
 <head>
 	<title>Alexander Conrad Nied's Homepage</title>
-	<meta name="keywords" content="Conrad Nied, Alexander Nied, A Conrad Nied, Alex Nied, UW, University of Washington, Computer Science, Computer Science and Engineering, CSE, CS">
+	<meta name="keywords" content="Conrad Nied, Alexander Nied, A Conrad Nied, Alex Nied, UW, University of Washington, Computer Science, Computer Science and Engineering, CSE, CS, HCDE, Human Centered Design and Engineering">
 	<meta name="author" content="Alexander Conrad Nied">
+
+    <!-- External Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Local Scripts -->
 	<link        rel="stylesheet" type="text/css"       href="./main.css" \>
 	<script language="JavaScript" type="text/javascript" src="./navigation.js"></script>
 	<script language="JavaScript" type="text/javascript">
@@ -21,41 +30,45 @@
 		window.onhashchange = function () {
 		    updateSection(window.location.hash);
 		}
-
-		// document.getElementById("curtain").onclick = function () {
-		//     updateSection(window.location.hash);
-		// }
 	</script>
 
 </head>
 
 <body>
-	<nav id="navbar">
-		<ul>
-			<li class="home"><a href="#" class="all">Alexander Conrad Nied</a></li>
-			<!-- The rest of the list is in reverse order because they all float right -->
-			<li><a href="#Potpourri" class="Potpourri">Potpourri</a></li>
-			<li><a href="#Publications" class="Publications">Publications</a></li>
-			<li><a href="#Research" class="Research HCIResearch MLResearch SocPsychResearch LangResearch NeuroResearch">Research</a>
-				<!--<ul>
-					<li><a href="#HumanCompInter"    class="HumanCompInter"   >Human Computer Interaction</a></li>
-					<li><a href="#SocialPsychology"  class="SocialPsychology" >Social Psychology</a></li>
-					<li><a href="#MachineLearningAI" class="MachineLearningAI">Machine Learning & AI</a></li>
-					<li><a href="#Linguistics"       class="Linguistics"      >Linguistics</a></li>
-					<li><a href="#Neuroscience"      class="Neuroscience"     >Neuroscience</a></li>
-				</ul>-->
-			</li>
-			<li><a href="#Biography" class="Biography">Bio</a></li>
-		</ul>
-	</nav>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Alexander Conrad Nied</a>
+            </div>
 
-	<br /><!-- <br /><br /> -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+                    <li><a href="#Biography">Bio</a></li>
+                    <li><a href="#Research">Research</a></li>
+                    <li><a href="#Publications">Publications</a></li>
+                    <li><a href="#Potpourri">Potpourri</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 
 	<div id="body">
 		<div id="Main"></div>
 
 		<div id="Biography" class="Main Biography">
-			<h2 class="header">Biography</h2>
+            <hr class="top">
+            <h2><a href="#Biography">Biography</a></h2>
+            <hr>
+			<!--<h2 class="header">Biography</h2>-->
 
 			<div class="descLeft">
 				<img src="images/AConradNied_Portrait_20130902.jpg" class="portrait" />
@@ -83,7 +96,10 @@
 		</div>
 
 		<div id="Research">
-			<h2 class="header"><a href="#Research">Research</a></h2>
+            <hr class="top">
+            <h2><a href="#Research">Research</a></h2>
+            <hr>
+			<!--<h2 class="header"><a href="#Research">Research</a></h2>-->
 
 			<div id="research_navbar">
 				<div class="research_nav AllResearch">
@@ -210,7 +226,10 @@
 		</div> <!-- Research -->
 
 		<div id="Publications">
-			<h2 class="header"><a href="#Publications">Publications</a></h2>
+            <!--<h2 class="header"><a href="#Publications">Publications</a></h2>-->
+            <hr class="top">
+            <h2><a href="#Publications">Publications</a></h2>
+            <hr>
 
 			<div class="Publications HCIResearch">
 				<p>Morgan Dixon, <strong>A. Conrad Nied</strong>, James Fogarty (2014).
@@ -232,7 +251,10 @@
 
 
 		<div id="Potpourri" class="iconlist">
-			<h2 class="header">Potpourri</h2>
+            <hr class="top">
+            <h2><a href="#Potpourri">Potpourri</a></h2>
+            <hr>
+			<!--<h2 class="header">Potpourri</h2>-->
 
 
 			<div id="potpourri2" class="year">
@@ -261,60 +283,6 @@
 					</a>
 				</div>
 			</div>
-			<!--
-			<div id="fun1" class="year">
-				<h2>Baking</h2>
-				<div id="Baking" class="project">
-					<a href="#BakingProj">
-						<img class="figure" src="images/AConradNied_Cookies_Rainbow_20130608.jpg">
-						<p>Baking</p>
-					</a>
-				</div>
-				<div id="Cupcakes" class="project">
-					<a href="#CupcakesProj">
-						<img class="figure" src="images/AConradNied_xxx_date.png">
-						<p>Cupcakes</p>
-					</a>
-				</div>
-				<div id="Cronuts" class="project">
-					<a href="#CronutsProj">
-						<img class="figure" src="images/AConradNied_xxx_date.png">
-						<p>Cronuts</p>
-					</a>
-				</div>
-			</div>
-
-			<div id="fun1" class="year">
-				<h2>Crafts</h2>
-				<div id="Frabjous" class="project">
-					<a href="#FrabjousProj">
-						<img class="figure" src="images/AConradNied_xxx_date.png">
-						<p>Frabjous</p>
-					</a>
-				</div>
-				<div id="TurbulentSeas" class="project">
-					<a href="#TurbulentSeasProj">
-						<img class="figure" src="images/AConradNied_xxx_date.png">
-						<p>Turbulent Seas</p>
-					</a>
-				</div>
-			</div>
-
-			<div id="fun1" class="year">
-				<h2>Other</h2>
-				<div id="SimbaDancing" class="project">
-					<a href="#SimbaDancingProj">
-						<img class="figure" src="images/AConradNied_xxx_date.png">
-						<p>Dancing with Simba</p>
-					</a>
-				</div>
-				<div id="TurbulentSeas" class="project">
-					<a href="#TurbulentSeasProj">
-						<img class="figure" src="images/AConradNied_xxx_date.png">
-						<p>Turbulent Seas</p>
-					</a>
-				</div>
-			</div>-->
 		</div>
 	</div> <!-- Body -->
 
