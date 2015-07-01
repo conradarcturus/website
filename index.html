@@ -39,7 +39,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_site" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -49,95 +49,105 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="navbar_site">
                 <ul class="nav navbar-nav navbar-right">
                     <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
                     <li><a href="#Biography">Bio</a></li>
                     <li><a href="#Research">Research</a></li>
                     <li><a href="#Publications">Publications</a></li>
                     <li><a href="#Potpourri">Potpourri</a></li>
+                    <li><a href="papers/AConradNied_CV_20150520.pdf">CV</a></li>
+                    <li><a href="http://www.youtube.com/user/arcturus12" class="navbar-brand">
+                        <img src="images/icons/youtube.png" style="height:20px"/></a>
+                    </li>
+                    <li><a href="https://github.com/conradarcturus" class="navbar-brand">
+                        <img src="images/icons/github.png" style="height:20px"/></a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
 	<div id="body">
-		<div id="Main"></div>
+
+        <!-- Add photo carousel for visual projects -->
 
 		<div id="Biography" class="Main Biography">
             <hr class="top">
             <h2><a href="#Biography">Biography</a></h2>
             <hr>
-			<!--<h2 class="header">Biography</h2>-->
 
-			<div class="descLeft">
-				<img src="images/AConradNied_Portrait_20130902.jpg" class="portrait" />
-				<p>
-					<a href="papers/AConradNied_CV_20150520.pdf">CV</a>
-					<a href="http://www.youtube.com/user/arcturus12">YouTube</a>
-					<a href="https://github.com/conradarcturus">Github</a>
-				</p>
-			</div>
+            <div class="container" style="width: 100% !important">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="center-block">
+                            <img class="img-responsive center-block" style="max-height: 240px"
+                                 src="images/AConradNied_Portrait_20130902.jpg"/>
+                        </div>
+                    </div>
 
-			<div class="descRight">
-				<p>PhD Student<br />
-				University of Washington<br />
-				Computer Science and Engineering<br />
-				anied (at) cs.washington.edu<br /></p>
+                    <div class="col-sm-9">
+                        <p>PhD Student<br />
+                        University of Washington<br />
+                        Computer Science and Engineering<br />
+                        anied (at) cs.washington.edu<br /></p>
 
-				<p>I use my background in cognitive science to analyze and improve human-human interaction over technology. I'm in my second year at UW. I'm advised by <a href="http://www.smunson.com/">Sean Munson</a> at Human Centered Design and Engineering. My office is in the CSE HCI Lab but I'm increasingly present in Sieg 423 and the Prosocial Computing Lab. I'm also a member of <a href="http://dub.washington.edu/">DUB</a>.</p>
+                        <p>I use my background in cognitive science to analyze and improve human-human interaction over technology. I've just completed my year at UW. I'm advised by <a href="http://www.smunson.com/">Sean Munson</a> at Human Centered Design and Engineering. I work with the CSE HCI Lab and the Prosocial Computing Lab. I'm also a member of <a href="http://dub.washington.edu/">DUB</a>.</p>
 
-				<p>Previously, I worked as Clinical Research Coordinator at Massachusetts General Hospital in the Neuropsychology Laboratory and got my bachelors degree in CS at Boston University.</p>
+                        <p>Previously, I worked as Clinical Research Coordinator at Massachusetts General Hospital in the Neuropsychology Laboratory and earned my bachelors degree in Computer Science with a minor in Anthropology at Boston University.</p>
 
-			    <!--<p>I imagine a day in which we will be able to enter each other's minds and feel and experience all of the emotions and thoughts we have. We are already on our way; technology has the power to transform our relationships and bring us together. To contribute to that field, I have worked in user interfaces, visualizing data, machine learning, neurolinguistics and social psychology.</p> -->
-
-			    <p>Last site update: 2015-04-29.</p>
-			</div>
-		</div>
+                        <p>Last site update: 2015-07-01. Right now I'm in the process of converting my website to Bootstrap.</p>
+                    </div>
+                </div>
+            </div> <!-- Container -->
+		</div> <!-- Biography Contents -->
 
 		<div id="Research">
             <hr class="top">
             <h2><a href="#Research">Research</a></h2>
             <hr>
-			<!--<h2 class="header"><a href="#Research">Research</a></h2>-->
 
-			<div id="research_navbar">
-				<div class="research_nav AllResearch">
-					<a href="#AllResearch">
-						<div class="research_button AllResearch">All</div>
-					</a>
-				</div>
-				<div class="research_nav MLResearch">
-					<a href="#MLResearch">
-						<div class="research_button MLResearch">Machine Learning</div>
-					</a>
-				</div>
-				<div class="research_nav HCIResearch">
-					<a href="#HCIResearch">
-						<div class="research_button HCIResearch">Human Computer Interaction</div>
-					</a>
-				</div>
-				<div class="research_nav SocPsychResearch">
-					<a href="#SocPsychResearch">
-						<div class="research_button SocPsychResearch">Social Psychology</div>
-					</a>
-				</div>
-				<div class="research_nav LangResearch">
-					<a href="#LangResearch">
-						<div class="research_button LangResearch">Language</div>
-					</a>
-				</div>
-				<div class="research_nav NeuroResearch">
-					<a href="#NeuroResearch">
-						<div class="research_button NeuroResearch">Neuroscience</div>
-					</a>
-				</div>
-			</div> <!-- research_navbar -->
+            <!--<nav class="navbar">-->
+                <!--<div class="container-fluid">-->
+                    <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+                    <!--<div class="navbar-header">-->
+                        <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_research" aria-expanded="false">-->
+                            <!--<span class="sr-only">Toggle navigation</span>-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                        <!--</button>-->
+                        <!--<a href="#AllResearch">All Research</a>-->
+                    <!--</div>-->
+
+                    <!--<div class="collapse navbar-collapse" id="navbar_research">-->
+                        <!--<ul class="nav nav-tabs nav-justified">-->
+                            <!--&lt;!&ndash;<li><a href="#AllResearch" class="active">All</a></li>&ndash;&gt;-->
+                            <!--<li><a href="#MLResearch">Machine Learning</a></li>-->
+                            <!--<li><a href="#HCIResearch">User Interfaces</a></li>-->
+                            <!--<li><a href="#SocPsychResearch">Social Psychology</a></li>-->
+                            <!--<li><a href="#LangResearch">Language</a></li>-->
+                            <!--<li><a href="#NeuroResearch">Neuroscience</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</nav>-->
+            <div id="research_navbar" class="navbar">
+                <ul class="nav nav-tabs" style="text-align: center">
+                    <li><a href="#AllResearch" class="active">All</a></li>
+                    <li><a href="#MLResearch">Machine Learning</a></li>
+                    <li><a href="#HCIResearch">User Interfaces</a></li>
+                    <li><a href="#SocPsychResearch">Social Psychology</a></li>
+                    <li><a href="#LangResearch">Language</a></li>
+                    <li><a href="#NeuroResearch">Neuroscience</a></li>
+                </ul>
+            </div>
+
 
 			<div id="projects" class="iconlist">
 				<div id="2015" class="year Research HCIResearch SocPsychResearch LangResearch">
 					<h2>2015</h2>
-					<div id="ValueComm" class="project Research LangResearch HCIResearch SocPsychResearch">
+					<div id="ValueComm" class="project Research LangResearch SocPsychResearch">
 						<a href="#ValueCommProj">
 							<img class="figure" src="images/AConradNied_ValueComm_Proposal_fig_20141025.png">
 							<p>Values in Deliberation</p>
@@ -159,7 +169,7 @@
 							<p>Mobile Input Research</p>
 						</a>
 					</div>
-					<div id="CSE512a3" class="project Research HCIResearch LangResearch">
+					<div id="CSE512a3" class="project Research LangResearch">
 						<a href="#CSE512a3Proj">
 							<img class="figure" src="images/AConradNied_CSE512a3_fig_20141026.png">
 							<p>Language Family Visuals</p>
@@ -206,7 +216,7 @@
 					<div id="PhonSOM" class="project Research LangResearch NeuroResearch MLResearch">
 						<a href="#PhonSOMProj">
 							<img class="figure" src="images/AConradNied_PhonSOM_20110512.png">
-							<p>Phonology SOM Model</p>
+							<p>Neural Phonology Model</p>
 						</a>
 					</div>
 					<div id="InfMap" class="project Research SocPsychResearch">
@@ -226,7 +236,6 @@
 		</div> <!-- Research -->
 
 		<div id="Publications">
-            <!--<h2 class="header"><a href="#Publications">Publications</a></h2>-->
             <hr class="top">
             <h2><a href="#Publications">Publications</a></h2>
             <hr>
