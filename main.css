@@ -28,6 +28,7 @@ h2 {
 #research_navbar ul {
     width: 100%;
     text-align: center;
+	vertical-align: middle;
 }
 
 #research_navbar ul li {
@@ -35,72 +36,26 @@ h2 {
     display: inline-block;
 }
 
-/*.research_nav {*/
-	/*/!*width: 145px;*!/*/
-	/*margin: 5px;*/
-	/*display: inline-table;*/
-	/*text-align: -webkit-center;*/
-/*}*/
+/* Content */
 
-/*.research_button {*/
-	/*background-color:#dfdfdf;*/
-	/*border-radius: 10px;*/
-	/*/!*border: solid 1px transparent;*!/*/
-	/*/!*padding: 5px 10px 5px 10px;*!/*/
-	/*padding: 5px 15px 5px 15px;*/
-/*}*/
+.iconlist div.row div {
+	text-align: center;
+}
 
-/*a:hover .research_button {*/
-	/*background-color:#efefef;*/
-	/*/!*border: solid 1px black;*!/*/
-/*}*/
-
-/*.research_nav a:hover {*/
-	/*text-decoration: none;*/
-/*}*/
+.iconlist img {
+	max-height: 200px;
+}
 
 /* Framing */
 
 body {
 	font-family: Avenir, Verdana, Helvetica, Arial, sans-serif;
-	/*font-size: 0.8em;*/
 	background-color: #FFFFFF;/*#DFFFEF;*/
 	margin: 0 auto 1.5em auto;
 	padding: 0 2em 2em 2em;
-	/*border: 10px;*/
-	/*border-top-width: 0px;*/
-	/*border-style: solid;*/
-	/*border-color: #008F9F;*/
-	/*width: 800px; */
 	min-height: 240px;
 	max-width: 950px;
  }
-
-/*.header {*/
-	/*font-size: 1.6em;*/
-	/*font-weight: bold;*/
-	/*padding: 0.3ex;*/
-	/*margin-top: 3ex;*/
-	/*margin-bottom: 1ex;*/
-	/*background-color: #008F9F;*/
-	/*color: #FFFFFF;*/
-	/*text-align: center;*/
-	/*z-index:5;*/
-	/*border-radius: 10px;*/
-/*}*/
-
-/*.header.secondary {*/
-	/*font-size: 1.2em;*/
-	/*background-color: #00AFBF;*/
-/*}*/
-
-/*.Publications .header {*/
-	/*background-color: #FFFFFF;*/
-	/*border: solid;*/
-	/*border-width: 2px 0px 2px 0px;*/
-	/*border-color: #00AFBF;*/
-	/*color: #00AFBF;*/
-/*}*/
 
 a {
 	color: black;
@@ -109,10 +64,6 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-
-/*.header a {*/
-	/*color: #FFFFFF;*/
-/*}*/
 
 p a:before {
 	content: "[";
@@ -170,14 +121,14 @@ br.interrupt {
 	height: 170px;
 }
 
-.project {
-	display: inline-table;
-	text-align: -webkit-center;
-	width: 170px;
-	margin-left: 3px;
-	margin-right: 3px;
-	z-index: 1;
-}
+/*.project {*/
+	/*display: inline-table;*/
+	/*text-align: -webkit-center;*/
+	/*width: 170px;*/
+	/*margin-left: 3px;*/
+	/*margin-right: 3px;*/
+	/*z-index: 1;*/
+/*}*/
 
 .project img.figure {
 	max-width: 160px;

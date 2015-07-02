@@ -18,6 +18,18 @@ var researchFocus;
 
 // build and initialize the navbar
 function installNavigation() {
+    $(".iconlist div.row div")
+        .addClass("project")
+        .addClass("col-xs-6")
+        .addClass("col-sm-4")
+        .addClass("col-md-3");
+    equal_cols(".iconlist div.row div");
+
+    $(".iconlist img")
+        .addClass("img-responsive")
+        .addClass("center-block");
+
+
     // precompute allSections
     navbar = getById("navbar");
     body = getById("body");
@@ -46,6 +58,19 @@ function installNavigation() {
     // }
 
     researchFocus = "Research"
+}
+
+function equal_cols(el)
+{
+    var h = 0;
+    $(el).each(function(){
+        $(this).css({'height':'auto'});
+        if($(this).outerHeight() > h)
+        {
+            h = $(this).outerHeight();
+        }
+        $(this).css({'height':h});
+    });
 }
 
 function toggleCurtain() {
