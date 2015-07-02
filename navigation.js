@@ -29,6 +29,9 @@ function installNavigation() {
         .addClass("img-responsive")
         .addClass("center-block");
 
+    $('#modals').load('modals.html', function() {
+        $('#modals div.modal-body a').attr("target", "_blank");
+    });
 
     // precompute allSections
     navbar = getById("navbar");
@@ -46,16 +49,11 @@ function installNavigation() {
         if(event.target.id == "curtain")
             toggleCurtain();
     };
-    // descContainer = getById("descContainer");
-    // descContainer.onclick = function() {};
-    projectlinks = getElementsByClassName(body, "project");
-    for(var iProject = 0; iProject < projectlinks.length; iProject++) {
-        projectlinks[iProject].onclick = function() { toggleCurtain(); };
-    }
-    // projectlinks = getElementsByClassName(getById("potpourri"), "project");
-    // for(var iProject = 0; iProject < projectlinks.length; iProject++) {
-    //     projectlinks[iProject].onclick = function() { toggleCurtain(); };
-    // }
+
+    //projectlinks = getElementsByClassName(body, "project");
+    //for(var iProject = 0; iProject < projectlinks.length; iProject++) {
+    //    projectlinks[iProject].onclick = function() { toggleCurtain(); };
+    //}
 
     researchFocus = "Research"
 }

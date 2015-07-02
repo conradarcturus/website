@@ -46,6 +46,22 @@ h2 {
 	max-height: 200px;
 }
 
+.modal-body .affiliation {
+	float: left;
+	font-weight: bold;
+}
+
+.modal-body .timeperiod {
+	float: right;
+	font-weight: bold;
+}
+
+.modal-body img {
+	margin: 0px auto;
+	padding: 25px;
+	max-height: 400px;
+}
+
 /* Framing */
 
 body {
@@ -117,42 +133,6 @@ br.interrupt {
 	display:block;
 }
 
-.iconlist .year {
-	height: 170px;
-}
-
-/*.project {*/
-	/*display: inline-table;*/
-	/*text-align: -webkit-center;*/
-	/*width: 170px;*/
-	/*margin-left: 3px;*/
-	/*margin-right: 3px;*/
-	/*z-index: 1;*/
-/*}*/
-
-.project img.figure {
-	max-width: 160px;
-	max-height: 120px;
-	float: none;
-}
-
-.iconlist .year h2 {
-	margin-bottom: 0px;
-	float: left;
-}
-
-.project.selected {
-	display: absolute;
-	text-align: -webkit-left;
-	z-index: 10;
-}
-
-.project.selected img.figure {
-	max-width: 400px;
-	max-height: 300px;
-	float: left;
-}
-
 .curtain {
 	display: none;
 	position: fixed;
@@ -204,9 +184,6 @@ br.interrupt {
 	margin: 10px auto 10px auto;
 }
 
-#Biography .descLeft a {
-	margin: 5px;
-}
 .description .descLeft a {
 	margin: 10px;
 }
@@ -225,8 +202,4 @@ br.interrupt {
 .description h3 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-}
-
-#Potpourri .year {
-	margin: 0px 35px 0px 35px;
 }
