@@ -22,15 +22,6 @@
     <!-- Local Scripts -->
 	<link        rel="stylesheet" type="text/css"       href="./main.css" \>
 	<script language="JavaScript" type="text/javascript" src="./navigation.js"></script>
-	<script language="JavaScript" type="text/javascript">
-		window.onload = function () {
-		    installNavigation();
-		    updateSection(window.location.hash);
-		}
-		window.onhashchange = function () {
-		    updateSection(window.location.hash);
-		}
-	</script>
 
 </head>
 
@@ -95,8 +86,6 @@
                         <p>I use my background in cognitive science to analyze and improve human-human interaction over technology. I've just completed my year at UW. I'm advised by <a href="http://www.smunson.com/">Sean Munson</a> at Human Centered Design and Engineering. I work with the CSE HCI Lab and the Prosocial Computing Lab. I'm also a member of <a href="http://dub.washington.edu/">DUB</a>.</p>
 
                         <p>Previously, I worked as Clinical Research Coordinator at Massachusetts General Hospital in the Neuropsychology Laboratory and earned my bachelors degree in Computer Science with a minor in Anthropology at Boston University.</p>
-
-                        <p>Last site update: 2015-07-01. Right now I'm in the process of converting my website to Bootstrap.</p>
                     </div>
                 </div>
             </div> <!-- Container -->
@@ -109,12 +98,12 @@
 
             <div id="research_navbar" class="navbar">
                 <ul class="nav nav-tabs" style="text-align: center">
-                    <li><a href="#AllResearch" class="active">All</a></li>
-                    <li><a href="#MLResearch">Machine Learning</a></li>
-                    <li><a href="#HCIResearch">User Interfaces</a></li>
-                    <li><a href="#SocPsychResearch">Social Psychology</a></li>
-                    <li><a href="#LangResearch">Language</a></li>
-                    <li><a href="#NeuroResearch">Neuroscience</a></li>
+                    <li class="Res active"><a onclick="setResearchFocus('')" class="active">All</a></li>
+                    <li class="ResML"><a onclick="setResearchFocus('ML')">Machine Learning</a></li>
+                    <li class="ResUI"><a onclick="setResearchFocus('UI')">User Interfaces</a></li>
+                    <li class="ResSP"><a onclick="setResearchFocus('SP')">Social Psychology</a></li>
+                    <li class="ResLG"><a onclick="setResearchFocus('LG')">Language</a></li>
+                    <li class="ResNS"><a onclick="setResearchFocus('NS')">Neuroscience</a></li>
                 </ul>
             </div>
 
@@ -122,71 +111,70 @@
 			<div id="projects" class="iconlist">
 
                 <div class="row">
-                    <div id="ValueComm" class="Research LangResearch SocPsychResearch">
+                    <div id="ValueComm" class="Res ResLG ResSP col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#ValueCommModal">
-                            <!--<a href="#ValueCommProj" data-toggle="modal" data-target="#myModal">-->
-                            <img src="images/AConradNied_ValueComm_LVG_2015Q1.png">
                             <p>Values in Deliberation</p>
+                            <img src="images/AConradNied_ValueComm_LVG_2015Q1.png">
                         </a>
                     </div>
-                    <div id="Verbalucce" class="Research LangResearch HCIResearch SocPsychResearch">
+                    <div id="Verbalucce" class="Res ResLG ResUI ResSP col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#VerbalucceModal">
-                            <img class="img-responsive" src="images/AConradNied_Verbalucce_2015Q3.png">
                             <p>Visual Feedback in Email</p>
+                            <img class="img-responsive" src="images/AConradNied_Verbalucce_2015Q3.png">
                         </a>
                     </div>
-                    <div id="Google2014" class="Research HCIResearch MLResearch">
+                    <div id="Google2014" class="Res ResUI ResML col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#Google2014Modal">
-                            <img class="img-responsive" src="images/AConradNied_Google2014_fig_20141025.png">
                             <p>Mobile Input Research</p>
+                            <img class="img-responsive" src="images/AConradNied_Google2014_fig_20141025.png">
                         </a>
                     </div>
-                    <div id="LangFam" class="Research LangResearch">
+                    <div id="LangFam" class="Res ResLG col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#LangFamModal">
-                            <img class="img-responsive" src="images/AConradNied_CSE512a3_fig_20141026.png">
                             <p>Language Family Visuals</p>
+                            <img class="img-responsive" src="images/AConradNied_CSE512a3_fig_20141026.png">
                         </a>
                     </div>
-                    <div id="Prefab" class="Research HCIResearch">
+                    <div id="Prefab" class="Res ResUI col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#PrefabModal">
-                            <img class="img-responsive" src="images/AConradNied_Prefab_UIST_fig_20141025.png">
                             <p>Prefab</p>
+                            <img class="img-responsive" src="images/AConradNied_Prefab_UIST_fig_20141025.png">
                         </a>
                     </div>
-                    <div id="GPS" class="Research NeuroResearch HCIResearch MLResearch">
+                    <div id="GPS" class="Res ResNS ResUI ResML col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#GPSModal">
-                            <img class="img-responsive" src="images/AConradNied_GPS_fig_20140106.png">
                             <p>GPS: MRI/MEEG Toolkit</p>
+                            <img class="img-responsive" src="images/AConradNied_GPS_fig_20140106.png">
                         </a>
                     </div>
-                    <div id="OneBusAway" class="Research MLResearch">
+                    <div id="OneBusAway" class="Res ResML col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#OneBusAwayModal">
-                            <img class="img-responsive" src="images/AConradNied_OneBusAway_Image.png">
                             <p>Bus Arrival Times</p>
+                            <img class="img-responsive" src="images/AConradNied_OneBusAway_Image.png">
                         </a>
                     </div>
-					<div id="PopAlgo" class="Research SocPsychResearch">
+					<div id="PopAlgo" class="Res ResSP col-xs-6 col-sm-4 col-md-3">
 						<a data-toggle="modal" data-target="#PopAlgoModal">
+                            <p>Visual Population Algorithms</p>
 							<img class="img-responsive" src="images/AConradNied_PopAlgo_fig_20141101.png">
-							<p>Visual Population Algorithms</p>
 						</a>
 					</div>
-					<div id="PTC" class="Research LangResearch NeuroResearch MLResearch">
-						<a data-toggle="modal" data-target="#PTCModal"">
+					<div id="PTC" class="Res ResLG ResNS ResML col-xs-6 col-sm-4 col-md-3">
+						<a data-toggle="modal" data-target="#PTCModal">
+                            <p>Neuroimaging Experiments</p>
 							<img class="img-responsive" src="images/AConradNied_PTC_PLoSONE_fig_20140121.png">
-							<p>Neuroimaging Experiments</p>
 						</a>
 					</div>
-					<div id="PhonSOM" class="Research LangResearch NeuroResearch MLResearch">
+					<div id="PhonSOM" class="Res ResLG ResNS ResML col-xs-6 col-sm-4 col-md-3">
 						<a data-toggle="modal" data-target="#PhonSOMModal">
+                            <p>Neural Phonology Model</p>
 							<img class="img-responsive" src="images/AConradNied_PhonSOM_20110512.png">
-							<p>Neural Phonology Model</p>
 						</a>
 					</div>
-					<div id="InfMap" class="Research SocPsychResearch">
+					<div id="InfMap" class="Res ResSP col-xs-6 col-sm-4 col-md-3">
 						<a data-toggle="modal" data-target="#InfMapModal">
+                            <p>Influence Simulation</p>
 							<img class="img-responsive" src="images/AConradNied_InfMap_fig_20141103.png">
-							<p>Influence Simulation</p>
 						</a>
 					</div>
                 </div>
@@ -223,48 +211,45 @@
             <hr>
 
 			<div class="row">
-				<div id="Baking" class="Research LangResearch SocPsychResearch">
+				<div id="Baking" class="col-xs-6 col-sm-4 col-md-3">
 					<a data-toggle="modal" data-target="#BakingModal">
+                        <p>Baking</p>
 						<img src="images/AConradNied_Cookies_Rainbow_20130608.jpg">
-						<p>Baking</p>
 					</a>
 				</div>
-				<div id="Art" class="Research LangResearch SocPsychResearch">
+				<div id="Art" class="col-xs-6 col-sm-4 col-md-3">
 					<a data-toggle="modal" data-target="#ArtModal">
+                        <p>Art</p>
 						<img src="images/AConradNied_Frabjous_Paper_20120117.jpg">
-						<p>Art</p>
 					</a>
 				</div>
-				<div id="Simba" class="Research LangResearch SocPsychResearch">
+				<div id="Simba" class="col-xs-6 col-sm-4 col-md-3">
 					<a data-toggle="modal" data-target="#SimbaModal">
+                        <p>Simba</p>
 						<img src="images/AConradNied_Simba_Window_20130125.jpg">
-						<p>Simba</p>
 					</a>
 				</div>
-				<div id="Dancing" class="Research LangResearch SocPsychResearch">
+				<div id="Dancing" class="col-xs-6 col-sm-4 col-md-3">
 					<a data-toggle="modal" data-target="#DancingModal">
+                        <p>Dancing</p>
 						<img src="images/AConradNied_Dancing_Salsa_Stephanie_2_201306.jpg">
-						<p>Dancing</p>
 					</a>
 				</div>
 			</div>
 		</div>
 	</div> <!-- Body -->
 
+    <!-- Footer -->
 	<div id="#endbreak">
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 	</div>
 
+    <div>
+        Last Site Update 2015-07-05
+    </div>
+
     <div id="modals"><!--/ Importing Modal Data /--></div>
 
-	<div id="curtain" class="curtain">
-		<div id="descContainer" class="descContainer">
-
-
-
-
-		</div> <!-- descContainer -->
-	</div> <!-- curtain -->
 </body>
 
 </html>

@@ -38,8 +38,16 @@ h2 {
 
 /* Content */
 
+#research_navbar a {
+	cursor: pointer;
+}
+
 .iconlist div.row div {
 	text-align: center;
+}
+
+.iconlist img:hover {
+	cursor: pointer;
 }
 
 .iconlist img {
@@ -131,75 +139,4 @@ br.interrupt {
 	height: 1px;
 	content:"";
 	display:block;
-}
-
-.curtain {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
-.curtain.on {
-	display: block;
-	bottom: 0;
-	right: 0;
-	z-index: 4;
-	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, .5);
-}
-
-.descContainer {
-	width: 800px;
-	height: 400px;
-	margin: 100px auto 100px auto;
-	vertical-align: middle;
-}
-
-.description {
-	width: 800px;
-	height: 400px;
-	border-radius: 10px;
-	border-width: 10px;
-	border-color: white;
-	background-color: #ffffff;
-}
-
-.descLeft {
-	float:left;
-	text-align: center;
-}
-
-.description .descLeft {
-	min-height: 300px;
-	width: 400px;
-	vertical-align: middle;
-}
-
-.description img.figure {
-	max-width: 380px;
-	max-height: 285px;
-	/*float: left;*/
-	margin: 10px auto 10px auto;
-}
-
-.description .descLeft a {
-	margin: 10px;
-}
-
-.description .descRight {
-	margin-left: 400px;
-	margin-right: 10px;
-}
-
-.description h2 {
-	padding-top: 10px;
-	margin-top: 20px;
-	margin-bottom: 5px;
-}
-
-.description h3 {
-	margin-top: 5px;
-	margin-bottom: 5px;
 }
