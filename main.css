@@ -44,14 +44,25 @@ h2 {
 
 .iconlist div.row div {
 	text-align: center;
-}
-
-.iconlist img:hover {
+/*    border: solid 1px #ddd;*/
+/*    border-radius: 15px;*/
+/*    margin: 15px;*/
 	cursor: pointer;
 }
 
+.iconlist div.row div:hover {
+    opacity: 40%;
+}
+
+/*
+.iconlist img:hover {
+	cursor: pointer;
+}
+*/
+
 .iconlist img {
 	max-height: 200px;
+    padding-bottom: 20px;
 }
 
 .modal-body .affiliation {

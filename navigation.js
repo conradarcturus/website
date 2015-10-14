@@ -7,6 +7,7 @@
 
 // build and initialize some parts
 $(document).ready(installNavigation);
+$(window).load(normalizeIconHeights);
 
 function installNavigation() {
     //$(".iconlist div.row div")
@@ -14,7 +15,6 @@ function installNavigation() {
     //    .addClass("col-xs-6")
     //    .addClass("col-sm-4")
     //    .addClass("col-md-3");
-    equal_cols(".iconlist div.row div");
 
     $(".iconlist img")
         .addClass("img-responsive")
@@ -24,6 +24,10 @@ function installNavigation() {
     $('#modals').load('modals.html', function() {
         $('#modals div.modal-body a').attr("target", "_blank");
     });
+}
+
+function normalizeIconHeights() {
+    equal_cols(".iconlist div.row div");
 }
 
 function equal_cols(el) {
