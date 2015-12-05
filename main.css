@@ -38,6 +38,12 @@ h2 {
 
 /* Content */
 
+#projects .row, #potpourri .row {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
 #research_navbar a {
 	cursor: pointer;
 }

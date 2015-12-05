@@ -27,7 +27,7 @@ function installNavigation() {
 }
 
 function normalizeIconHeights() {
-    equal_cols(".iconlist div.row div");
+//    equal_cols(".iconlist div.row div");
 }
 
 function equal_cols(el) {
@@ -51,18 +51,19 @@ function setResearchFocus(focus) {
     var turnOn = $('#projects .ResOff.Res' + focus);
     var turnOff = $('#projects .Res:not(.ResOff):not(.Res' + focus + ')');
 
+    // Used to take 2000 ms
     turnOn.animate({
         padding: "15px",
         opacity: 1.0,
         fontSize: "1em",
         width: "toggle"
-    }, 2000);
+    }, 0000);
     turnOff.animate({
         padding: "0px",
         opacity: 0.25,
         fontSize: "0em",
         width: "toggle"
-    }, 2000);
+    }, 0000);
 
     // Keep track of what was changed.
     turnOn.addClass('ResOn').removeClass('ResOff');
