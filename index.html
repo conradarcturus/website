@@ -47,7 +47,7 @@
                     <li><a href="#Research">Research</a></li>
                     <li><a href="#Publications">Publications</a></li>
                     <li><a href="#Potpourri">Potpourri</a></li>
-                    <li><a href="papers/AConradNied_CV_20150520.pdf">CV</a></li>
+                    <li><a href="papers/AConradNied_Resume_20160820.pdf">Resume</a></li>
                     <li><a href="http://www.youtube.com/user/arcturus12" class="navbar-brand">
                         <img src="images/icons/youtube.png" style="height:20px"/></a>
                     </li>
@@ -79,18 +79,23 @@
 
                     <div class="col-sm-9">
                         <p>
-                            PhD Student<br />
-                            University of Washington<br />
-                            Computer Science and Engineering<br />
-                            anied (at) cs.washington.edu<br />
+                            Recent Masters Graduate from University of Washington<br />
+                            conrad.logos (at) gmail.com<br />
                         </p>
 
                         <p>
-                            I use my background in cognitive science to analyze and improve human-human interaction over technology.
-                            I am in my third year in CSE, but most of my work is in Human Centered Design and Engineering
-                            I'm currently working on crisis informatics with <a href="http://faculty.washington.edu/kstarbi/">Kate Starbird</a> in the <a href="http://depts.washington.edu/emcomp/">emCOMP Lab</a>.
-                            I also have few projects looking at personal informatics in computer-mediated communication with <a href="http://www.smunson.com/">Sean Munson</a>.
-                            I'm also a member of <a href="http://dub.washington.edu/">DUB</a>.
+                            I use my background in cognitive science to analyze and improve human to human interaction over technology.
+                            In the 90s people thought that the internet would open up the world of information to everyone, democratizing information.
+                            While it undoubtably has helped connect people and spread ideas, technology risks cheapening human expression and creating echo chambers limiting our empathy and diversity of ideas.
+                            I work to break down these barriers by <strong>building technology that increases human expression</strong> as well as <strong>opens up perspectives and safeguards opinions.</strong>
+                            Using a combination of user-centered design and data-driven machine intelligence I hope to bridge the emotional and intellectual gaps that we see in today's online technology.
+                        </p>
+                        
+                        <p>
+                            I have just passed my masters miletone at the Computer Science and Engineering department at the University of Washington while doing research in the Human Centered Design and Engineering Department.
+                            I'm now seeking a permanent job in industry so I can make a tangible impact on the way we interact online.
+                            My last research project examined the spread of misinformation along social networks with <a href="http://faculty.washington.edu/kstarbi/">Kate Starbird</a> in the <a href="http://misinfo.somelab.net">Misinformation Research Group</a>.
+                            I also have recently worked on a projects looking at personalized computer-mediated communication with <a href="http://www.smunson.com/">Sean Munson</a>.
                         </p>
 
                         <p>
@@ -104,12 +109,13 @@
 
 		<div id="Research">
             <hr class="top">
-            <h2><a href="#Research">Research</a></h2>
+            <h2><a href="#Research">Projects</a></h2>
             <hr>
 
             <div id="research_navbar" class="navbar">
                 <ul class="nav nav-tabs" style="text-align: center">
                     <li class="Res active"><a onclick="setResearchFocus('')" class="active">All</a></li>
+                    <li class="ResDM"><a onclick="setResearchFocus('DM')">Data Management</a></li>
                     <li class="ResML"><a onclick="setResearchFocus('ML')">Machine Learning</a></li>
                     <li class="ResUI"><a onclick="setResearchFocus('UI')">User Interfaces</a></li>
                     <li class="ResSP"><a onclick="setResearchFocus('SP')">Social Psychology</a></li>
@@ -122,13 +128,19 @@
 			<div id="projects" class="iconlist">
 
                 <div class="row">
-                    <div id="MisInfoML" class="container Res ResLG ResML col-xs-6 col-sm-4 col-md-3">
-                        <a data-toggle="modal" data-target="#MisInfoMLModal">
-                            <p>Identifying Rumors in Crisis Social Media</p>
-                            <img src="images/AConradNied_TwitterRumor_20151205.png">
+                    <div id="TwitterCSS" class="container Res ResDM col-xs-6 col-sm-4 col-md-3">
+                        <a data-toggle="modal" data-target="#TwitterCSSModal">
+                            <p>Product Safety Systems @ Twitter</p>
+                            <img src="images/AConradNied_Twitter_20160819.png">
                         </a>
                     </div>
-                    <div id="MisInfoInfra" class="container Res ResUI col-xs-6 col-sm-4 col-md-3">
+                    <div id="MisInfoSNA" class="container Res ResLG ResML ResSP col-xs-6 col-sm-4 col-md-3">
+                        <a data-toggle="modal" data-target="#MisInfoSNAModal">
+                            <p>Examining Misinformation Propagating on Social Networks</p>
+                            <img src="images/AConradNied_MisinfoSNA_20160819.png">
+                        </a>
+                    </div>
+                    <div id="MisInfoInfra" class="container Res ResUI ResDM col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#MisInfoInfraModal">
                             <p>Social Media Capture Infrastructure</p>
                             <img src="images/AConradNied_TwitterInfra_20151205.png">
@@ -164,7 +176,7 @@
                             <img class="img-responsive" src="images/AConradNied_Prefab_UIST_fig_20141025.png">
                         </a>
                     </div>
-                    <div id="GPS" class="container Res ResNS ResUI ResML col-xs-6 col-sm-4 col-md-3">
+                    <div id="GPS" class="container Res ResNS ResUI ResML ResDM col-xs-6 col-sm-4 col-md-3">
                         <a data-toggle="modal" data-target="#GPSModal">
                             <p>GPS: MRI/MEEG Toolkit</p>
                             <img class="img-responsive" src="images/AConradNied_GPS_fig_20140106.png">

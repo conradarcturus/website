@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<div id="MisInfoMLModal" class="modal fade" role="dialog">
+<div id="TwitterCSSModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,11 +8,33 @@
                 <h4 class="modal-title">Identifying Rumors in Crisis Social Media</h4>
             </div>
             <div class="modal-body">
-                <span class="affiliation">University of Washington</span>
-                <span class="timeperiod">2015 - Present</span>
-                <img class="img-responsive" src="images/AConradNied_TwitterRumor_20151205.png">
+                <span class="affiliation">Twitter</span>
+                <span class="timeperiod">2016</span>
+                <img class="img-responsive" src="images/twitterbird_RGB.png">
                 <p>
-                    I'm working on finding new ways to analyze tweets to analyze the nature of communication during crisis events. My focus is on analyzing language patterns.
+                    I interned in the Product Safety Systems team @ Twitter. I helped improve the service that catches spam aand harassment by improving database connections.
+                </p>
+            </div>
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<div id="MisInfoSNAModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Examining Misinformation Propagating on Social Networks</h4>
+            </div>
+            <div class="modal-body">
+                <span class="affiliation">University of Washington</span>
+                <span class="timeperiod">2015 - 2016</span>
+                <img class="img-responsive" src="images/AConradNied_MisinfoSNA_full_20160819.png">
+                <p>
+                    I examined the flow of misinformation during crisis events, particularly the Umpqua CC Shooting and Paris Attacks in 2015 Q4. While I believe these events happened and were very tragic, I found many users resisting mainstream media narratives, using evidence-based reasoning to deny the events. I examined the sources of this evidence &amp; the social activity driving the spread of kinds of information like this. This led me to uncover many fake accounts spreading this information as well as network dynamics that we did not expect. I'd say more but we hope to publish findings from this project.
                 </p>
             </div>
             <!--<div class="modal-footer">-->
@@ -31,13 +53,21 @@
             </div>
             <div class="modal-body">
                 <span class="affiliation">University of Washington</span>
-                <span class="timeperiod">2015 - Present</span>
+                <span class="timeperiod">2015 - 2016</span>
                 <img class="img-responsive" src="images/AConradNied_TwitterInfra_20151205.png">
                 <p>
                     Over 12 researchers (2 PIs, 4 grads, and 6+ undergrads) work on different facets identifying and analyzing rumors in social media.
                     This creates a need for technical infrastructure to gather social media posts and automatically provide statistics and interactive support for their analysis.
-                    Started by John Robinson and Jim Maddock, Conrad has joined the technical support team writing and maintaining these tools.
-                    Fall 2015, Conrad worked on making interactive visualizations to analyze the volume and kinds of tweets the capture software gets.
+                    Thereby, Conrad has made a series of webpages to 1) show dataset availability 2) provide on-demand timeseries visualization 3) report on the accuracy &amp; trends of manual annotations and 4) report frequent terms and patterns in the sets of tweets.
+                    This work required migranting the data into a relational database, building Python utilities to transfer data around, interfacing with MySQL, MongoDB, Google Docs as well as other rest APIs.
+                    The front-end is built in javascript and php, using D3 and JQuery and smaller libraries to drive particular user patterns.
+                </p>
+                <p>
+                    You can access the code on <a href="https://github.com/emCOMP/visualization">
+                    git <img src='images/icons/github.png' style="height:20px; padding:0px"/></a>
+                </p>
+                <p>
+                    The website can be found at <a href="http://misinfo.somelab.net/analysis">misinfo.somelab.net/analysis</a>. Unfortunately we do not support external authentication yet.
                 </p>
             </div>
             <!--<div class="modal-footer">-->
@@ -105,7 +135,7 @@
                 <p>
                     My main responsibilities were updating the code base and administering a field study on the tool.
                     Margaret Morris and <a href="http://www.adrienneslaughter.com/">Adrienne Andrew Slaughter</a> originally worked on the tool.
-                    <a href="http://www.lucascolusso.com">Lucas Colusso</a> helpd us design the aesthetic of the latest version.
+                    <a href="http://www.lucascolusso.com">Lucas Colusso</a> helped us design the aesthetic of the latest version.
                     Gary Hsieh and Sean Munson advised me during the study.
                 </p>
             </div>
