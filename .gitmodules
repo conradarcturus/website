@@ -1,0 +1,3 @@
+[submodule "projects/interactive_maps"]
+	path = projects/interactive_maps
+	url = https://github.com/conradarcturus/interactive_maps
